@@ -4,19 +4,19 @@
 </head>
 <body>
 
-<form action="/pagename" method="post"> <!-- action is basically specifies where the data should go or the next page-->
+<form action="/pagename" method="post" autocomplete="on"> <!-- action is basically specifies where the data should go or the next page,autocomplete fetches the suggestio n or older values-->
 	<pre>                               <!--pre used to align automatically-->
 	<h1>Registration field</h1>
 <label>Name</label>
-<input type="text" name="first name" value="namruta" >  <!-- if it is predefined value then we will specify in the vallue field or during execution user will  give that type can be text or number or email -->
+<input  style="text-transform: uppercase;"    type="text" name="first name" value="namruta" readonly size="4" >  <!-- if it is predefined value then we will specify in the vallue field or during execution user will  give that type can be text or number or email,readonly means we cant change the predefined values -->
 
 
 <label>Number</label>
-<input type="number" name="mob no." >
+<input type="number" name="mob no." placeholder="enter 10 valid phone number" required >
 
 
 <label>Email</label>
-<input type="text" name="E-mail">
+<input type="text" name="E-mail" required autocomplete="off" disabled="" >  <!-- we cannot touch or cant add anything-->
 
 
 <label>Date</label>
@@ -24,7 +24,7 @@
 
 
 <label>Time</label>
-<input type="time" >
+<input type="time" hidden >  <!--not visible tothe user-->
 
 <label>Gender</label>
 <input type="radio" name="gender" value="female">female
@@ -32,20 +32,20 @@
 
 <label>Hobbies</label>
 <input type="checkbox"  value="">cooking
-<input type="checkbox"  value="">watching movies
+<input type="checkbox"  value="" checked>watching movies <!--checked can be used to checkbox or radio-->
 <input type="checkbox"  value="">gardening
 
 
 <label>Country</label> 
 <select name="Bharat"> 
 <option >India</option>                                <!-- if w give the value then it will give like that but when we selct that then we can see idia-->
-<option>USA</option>
+<option selected="">USA</option>
 <option>china</option>
-<option>USA</option>
+<option>UK</option>
 </select>
 
 <label>Password</label>
-<input type="Password" name="Password">
+<input type="Password" name="Password" required="" autofocus maxlength="6" minlength="5" pattern="[a-zA-Z ^0-9]{6}">  <!-- autofocus means highlights that field amd cursor will go there directly,^ will not take further one here it will not take numbers-->
 
 <label>Image</label>
 <input type="file" name="Password" accept="Image/*">  <!-- accept is optional it will accepts whatever we specify the value-->
