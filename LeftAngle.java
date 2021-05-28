@@ -12,7 +12,7 @@ for(int i=1;i<=row;i++){
 	   if(i+j > row) 
             System.out.print("* ");	   
 	else
-		    System.out.print(" ");
+		    System.out.print("  ");
                 }
 
            System.out.println();
