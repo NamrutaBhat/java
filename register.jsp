@@ -7,15 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body bgcolor="PaleVioletRed">
-<form action="rs">
-Name:<input type="text" name="name">
-Mobile no:<input type="text" name="mobile nu">
-age:<input type="text" name="age">
-email:<input type="text" name="email">
+<form action="rs"><pre>
+user_id:         <input type="number" name="userid">
+name:            <input type="text" name="name">
+phone_no:        <input type="text" name="phone_no">
+age :            <input type="number" name="age">
+blood_group:     <input type="text" name="blood_group">
 
 <input type="submit" name="submit">
 
-
+</pre>
 
 </form>
 
