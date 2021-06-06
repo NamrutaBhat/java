@@ -11,7 +11,7 @@ import static com.xworkz.banking_app.constants.Constants.DELETE_USER_BY_ACCOUNT_
 import static com.xworkz.banking_app.constants.Constants.DRIVER_CLASS_NAME;
 import static com.xworkz.banking_app.constants.Constants.INSERT_QUERY;
 import static com.xworkz.banking_app.constants.Constants.SELECT_QUERY;
-import static com.xworkz.banking_app.constants.Constants.UPDATE_AGE_BY_DONOR_NAME;
+import static com.xworkz.banking_app.constants.Constants.UPDATE_AGE_BY_USER_NAME;
 import static com.xworkz.banking_app.constants.Constants.URL;
 
 public class BankingAppImpl implements BankingAppDAO {
@@ -42,7 +42,7 @@ public class BankingAppImpl implements BankingAppDAO {
 		
 		Class.forName(DRIVER_CLASS_NAME);
 		Connection con = DriverManager.getConnection(URL);
-		PreparedStatement preparedStatement = con.prepareStatement(UPDATE_AGE_BY_DONOR_NAME);
+		PreparedStatement preparedStatement = con.prepareStatement(UPDATE_AGE_BY_USER_NAME);
 		preparedStatement.setInt(1, age);
 		preparedStatement.setString(2, userName);
 		
