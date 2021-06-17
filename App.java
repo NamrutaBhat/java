@@ -1,4 +1,4 @@
-package com.xworkz.bluetooth.bluetooth_speaker;
+package com.xworkz.instagram;
 
 /**
  * Hello world!
