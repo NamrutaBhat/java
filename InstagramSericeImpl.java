@@ -1,6 +1,8 @@
 package com.xworkz.instagram.service;
 
 
+import java.util.List;
+
 import com.xworkz.instagram.dao.InstagramDAO;
 import com.xworkz.instagram.dao.InstagramDAOImpl;
 import com.xworkz.instagram.dto.InstagramDTO;
@@ -66,6 +68,46 @@ private InstagramDAO  instagramDAO;
 		{
 			System.out.println("please enter valid id");
 		}
+	}
+
+
+
+	@Override
+	public InstagramDTO getAllDetailsOfInstaById(int id) {
+	   if(id>0)
+	   {
+		   instagramDAO.getAllDetailsOfInstaById(id);
+	   }
+		return null;
+	}
+
+
+
+	@Override
+	public String getStoryByName(String name) {
+	if(name!=null)
+	{
+		instagramDAO.getStoryByName(name);
+	}
+		return null;
+	}
+
+
+
+	@Override
+	public Object[] getAccountTypeAndNameById(int id) {
+		if(id>0) {
+			instagramDAO.getAccountTypeAndNameById(id);
+		}
+		return null;
+	}
+
+
+
+	@Override
+	public List getPasswordAndNameById(int id) {
+		
+		return instagramDAO.getPasswordAndNameById(id);
 	}
 
 }
